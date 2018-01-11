@@ -25,10 +25,11 @@
 # and donuts(23) returns 'Number of donuts: many'
 def donuts(count):
 	if count < 10:
-		print 'Number of donuts:', count
+		donutresult = 'Number of donuts: %d' % (count)
+		return donutresult
 	else:
-		print 'Number of donuts: many' 
-
+		donutresult = 'Number of donuts: many' 
+		return donutresult
 
 
 # B. both_ends
@@ -38,11 +39,12 @@ def donuts(count):
 # is less than 2, return instead the empty string.
 def both_ends(s):
 	if len(s) > 2:
-		beginning = s[:3]
+		beginning = s[:2]
 		end = s[-2:]
-		print str(beginning),str(end)
+		newstring = beginning + end
+		return newstring
 	else:
-		print ''
+		return ''
 
 
 
@@ -56,8 +58,10 @@ def both_ends(s):
 # Hint: s.replace(stra, strb) returns a version of string s
 # where all instances of stra have been replaced by strb.
 def fix_start(s):
-	startchar = s[0]
-	s.replace(startchar, '*')
+	firstchar = s[0]
+	restofline = s[1:]
+	replaced = restofline.replace(firstchar, '*')
+	return firstchar + replaced
 
 
 # D. MixUp
@@ -72,7 +76,8 @@ def mix_up(a, b):
 	bchars = b[:2]
 	amix = a.replace(a[:2], bchars)
 	bmix = b.replace(b[:2], achars)
-	print amix, ' ', bmix
+	aplusb = amix + ' ' +  bmix
+	return aplusb
 
 
 
