@@ -25,10 +25,10 @@
 # and donuts(23) returns 'Number of donuts: many'
 def donuts(count):
 	if count < 10:
-	print 'Number of donuts: ', count
+		print 'Number of donuts:', count
 	else:
-	print 'Number of donuts: many' 
-  return
+		print 'Number of donuts: many' 
+
 
 
 # B. both_ends
@@ -41,9 +41,9 @@ def both_ends(s):
 		beginning = s[:3]
 		end = s[-2:]
 		print str(beginning),str(end)
-	else
+	else:
 		print ''
-  return
+
 
 
 # C. fix_start
@@ -58,7 +58,6 @@ def both_ends(s):
 def fix_start(s):
 	startchar = s[0]
 	s.replace(startchar, '*')
-  return
 
 
 # D. MixUp
@@ -74,7 +73,7 @@ def mix_up(a, b):
 	amix = a.replace(a[:2], bchars)
 	bmix = b.replace(b[:2], achars)
 	print amix, ' ', bmix
-  return
+
 
 
 # Provided simple test() function used in main() to print
